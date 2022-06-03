@@ -10,7 +10,7 @@ SINCRONIZARPAINEL () {
       bash <(wget -qO- sshplus.xyz/scripts/utilitarios/syncpainel/inst)
 }
 SLOWDNS () {
-      wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/install; chmod +x install; ./install
+      wget https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/Modulos/ddos
 }
 PAINELV20 () {
     wget https://raw.githubusercontent.com/fabricio94b/Painel-v20/main/install; chmod +x install; ./install
@@ -36,7 +36,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[41;1;37m            ○ SISTEMA AVANÇADO ○             \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;31m  [\033[1;36m 01 \033[1;31m] \033[1;37m• \033[1;33mSINCRONIZAR QUALQUER PAINEL WEB 
-\033[1;31m  [\033[1;36m 02 \033[1;31m] \033[1;37m• \033[1;33mDSTV
+\033[1;31m  [\033[1;36m 02 \033[1;31m] \033[1;37m• \033[1;33mDSTV1
 \033[1;31m  [\033[1;36m 03 \033[1;31m] \033[1;37m• \033[1;33mDSTV 
 \033[1;31m  [\033[1;36m 04 \033[1;31m] \033[1;37m• \033[1;33mDSTV
 \033[1;31m  [\033[1;36m 05 \033[1;31m] \033[1;37m• \033[1;33mBOT (CRIADOR DE CONTA FREE)
