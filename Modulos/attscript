@@ -62,13 +62,17 @@ fun_atts () {
 
   [[ -e /tmp/att ]] && rm /tmp/att
 
-	wget -c -P /home https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/Install/versao
+	wget -c -P /home https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/Install/versao
 
 	[[ -f "/home/versao" ]] && mv /home/versao /tmp/att
 
 	[[ ! -e /bin/versao ]] && rm -rf /bin/menu
 
 } > /dev/null 2>&1
+
+echo -e "                              \033[1;31mBy @ALFAINTERNET\033[1;36m"
+
+echo -e "   SSHPlus" | figlet
 
 echo -e "                              \033[1;31mALFAINTERNET MANAGER\033[1;36m"
 
