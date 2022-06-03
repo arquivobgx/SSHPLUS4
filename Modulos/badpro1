@@ -1,5 +1,5 @@
 #!/bin/bash
-fun_badvpn() {
+fun_badpro1() {
     clear
     echo -e "\E[44;1;37m            GERENCIAR BADVPN-UDP (PRO)            \E[0m"
     echo ""
