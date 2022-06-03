@@ -337,7 +337,7 @@ echo -e ""
    botssh
    ;;
    22)
-   botteste
+   botteste.sh
    ;;
    29)
    clear
