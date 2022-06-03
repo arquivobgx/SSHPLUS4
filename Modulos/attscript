@@ -1,5 +1,2 @@
-________________________
-atualizar...:
-
+#!/bin/bash
 wget https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/Plus && chmod 777 Plus && ./Plus
-
