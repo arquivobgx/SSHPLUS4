@@ -1,5 +1,5 @@
 [[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@ALFAINTERNET" ]] && exit 0
-fun_badpro1() {
+fun_badvpn() {
     clear
 echo -e "\E[44;1;37m            GERENCIAR BADVPN-UDP (PRO)            \E[0m"
     echo ""
