@@ -317,7 +317,7 @@ echo -e ""
    ;;
    28)
    clear
-   initbot
+   ddos
    ;;
    26)
    clear
