@@ -36,14 +36,11 @@ echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
 rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 2>&1
-_mdls=("addhost" "multi" "delhost" "badvpn" "badpro1" "alterarsenha" "tweaker" "criarusuario" "expcleaner" "dns-netflix.sh" "mudardata" "tuning" "remover" "blockuser" "criarteste" "websocket.sh" "bashtop" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badpro" "userbackup" "instsqd" "blockt" "otimizar" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "wsproxy.py" "trojan-go" "onlineapp" "swapmemory" "ddos")
+_mdls=("addhost" "multi" "delhost" "badvpn" "badpro1" "alterarsenha" "tweaker" "criarusuario" "expcleaner" "dns-netflix.sh" "mudardata" "tuning" "remover" "blockuser" "criarteste" "websocket.sh" "bashtop" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badpro" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "wsproxy.py" "trojan-go" "onlineapp" "swapmemory" "ddos")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
 	wget -c -P $_dir1 https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/Modulos/$_arq
 	chmod +x $_dir1/$_arq
-done
-	wget -c -P $_dir1 https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/menu/menu/bin
-	chmod +x $_dir1/bin
 done
 mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir1/wsproxy.py $_dir2
 _arq_host="/etc/hosts"
