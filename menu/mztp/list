@@ -28,7 +28,7 @@ dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 [[ ! -d /etc/rec ]] && mkdir /etc/rec
 [[ ! -e /etc/bot/lista_ativos ]] && touch /etc/bot/lista_ativos
 [[ ! -e /etc/bot/lista_suspensos ]] && touch /etc/bot/lista_suspensos
-echo -e 'by: @ALFAINTERNET' >/usr/lib/sshplus && cat /usr/lib/sshplus >$lst2/licence && cat /usr/lib/sshplus > /etc/SSHPlus/.tmp/crazy
+echo -e 'by: @KIRITO_SSH' >/usr/lib/sshplus && cat /usr/lib/sshplus >$lst2/licence && cat /usr/lib/sshplus > /etc/SSHPlus/.tmp/crazy
 netstat -nplt | grep -w 'apache2' | grep -w '80' && sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf && service apache2 restart
 [[ "$(grep -o '#Port 22' /etc/ssh/sshd_config)" == "#Port 22" ]] && sed -i "s;#Port 22;Port 22;" /etc/ssh/sshd_config && service ssh restart
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
@@ -36,7 +36,7 @@ echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
 rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 2>&1
-_mdls=("acksyshttpack" "addhost" "ajuda" "alterarlimite" "alterarsenha" "antCrachARM.sh" "apache2menu" "attscript" "Autobackup" "backup_mail.sh" "badpro" "badpro1" "badvpn" "banner" "bashtop" "blocksite" "blockt" "blockuser" "bot" "botssh" "botteste" "botteste.sh" "cabecalho" "celular.sh" "conexao" "criarteste" "criarusuario" "ddos" "delhot" "delscript" "detalhes" "dns-netflix.sh" "dns-server" "droplimiter" "expcleaner" "fr" "havaged" "infousers" "initbot" "instsqd" "limit" "limiter" "menu" "mtuning" "mudardata" "multi" "onlineapp" "open.py" "otimizar" "painelv2ray" "prissh" "proxy.py" "reiniciarservicos" "reiniciarsistema" "remove-slow" "remover" "restartdns" "rps_cpu" "senharoot" "ShellBot.sh" "slow_dns" "slowdns" "slowdns-drop" "slowdns-info" "slowdns-socks" "slowdns-ssh" "slowdns-ssl" "speedtest" "sshmonitor" "startdns" "stopdns" "swapmemory" "trafegototal" "trojan-go" "tuning" "tweaker" "uexpired" "userbackup" "v2ray" "v2raymanager" "verifatt" "verifbot" "vnc_inst" "webmin.sh" "websocket.sh" "wsproxy.py")
+_mdls=("acksyshttpack" "addhost" "ajuda" "alterarlimite" ".uid" ".rmuser" ".rmuid" ".criar" "ackclear" "alterarsenha" "antCrachARM.sh" "apache2menu" "attscript" "Autobackup" "backup_mail.sh" "badpro" "badpro1" "badvpn" "banner" "bashtop" "blocksite" "blockt" "blockuser" "bot" "botssh" "botteste" "botteste.sh" "cabecalho" "celular.sh" "conexao" "criarteste" "criarusuario" "ddos" "delhot" "delscript" "detalhes" "dns-netflix.sh" "dns-server" "droplimiter" "expcleaner" "fr" "havaged" "infousers" "initbot" "instsqd" "limit" "limiter" "menu" "mtuning" "mudardata" "multi" "onlineapp" "open.py" "otimizar" "painelv2ray" "prissh" "proxy.py" "reiniciarservicos" "reiniciarsistema" "remove-slow" "remover" "restartdns" "rps_cpu" "senharoot" "ShellBot.sh" "slow_dns" "slowdns" "slowdns-drop" "slowdns-info" "slowdns-socks" "slowdns-ssh" "slowdns-ssl" "speedtest" "sshmonitor" "startdns" "stopdns" "swapmemory" "trafegototal" "trojan-go" "tuning" "tweaker" "uexpired" "userbackup" "v2ray" "v2raymanager" "verifatt" "verifbot" "vnc_inst" "webmin.sh" "websocket.sh" "wsproxy.py")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
 	wget -c -P $_dir1 https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/menu/mztp/Modulos/$_arq
