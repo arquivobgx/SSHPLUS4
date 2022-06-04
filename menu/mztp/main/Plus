@@ -333,13 +333,18 @@ echo "EXEMPLO"  | pv -qL 8
 echo "" 
 echo "GRUPOS..."  | pv -qL 8
 sleep 2
-echo -e "\033[1;31m GRUPO 1 🙌\033[5;34;47m GRUPO 2 🙃\033[0m"
+echo -e "\033[1;31m GRUPO 1 🙌\033[5;34;47m @ALFAINTERNET 🙃\033[0m"
+echo "" 
+echo -e "\033[1;31m GRUPO 2 🙌\033[5;34;47m FAMILIA X9 🙃\033[0m"
 echo "" 
 sleep 2
 
 echo "FÁCIL DE ENTENDER NÉ?? "  | pv -qL 6
 echo "LEGAL !! TUDO PRONTO, BORA COMEÇAR"  | pv -qL 8
-echo -e "   ALFAINTERNET" | figlet
+echo -e "system=$(cat /etc/issue.net)
+date=$(date '+%Y-%m-%d <> %H:%M:%S')
+echo -e "\033[1;37m $system                          $date"
+figlet "    ALFAINTERNET" | lolcat
 echo "SE VAI MAIS LONGE DO QUE OUTROS, SÓ JOGAR NOS GRUPOS 👍" 
 echo -e "\033[1;31m \033[1;33mPARA INICIAR DIGITE: \033[1;32mmenu\033[0m"
 echo -e "\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@ALFAINTERNET\033[0m"
