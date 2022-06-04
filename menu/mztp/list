@@ -1,14 +1,10 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: CONEXAO SSHPLUS MANAGER
-#   DATA ATT:   28 de Set 2020
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	@ALFAINTERNET
 #====================================================
-_lvk=$(wget -qO- http://SEU-IP-AKI/script/versao)
+_lvk=$(wget -qO- https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/Sistema/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
-IP2=$(wget -qO- http://whatismyip.akamai.com/)
+IP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
 echo -e "$ipdovps" >/etc/IP
 lst=$1 && lst1=$2 && lst2=$3 && key1=$4 && key2=crz
@@ -19,6 +15,7 @@ dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 	rm -rf $_Ink/list >/dev/null 2>&1 && cat /dev/null >~/.bash_history && history -c && exit 0
 }
 [[ ! -d /etc/SSHPlus ]] && mkdir /etc/SSHPlus
+[[ ! -d /etc/SSHPlus/v2ray ]] && mkdir /etc/SSHPlus/v2ray
 [[ ! -d /etc/SSHPlus/senha ]] && mkdir /etc/SSHPlus/senha
 [[ ! -e /etc/SSHPlus/Exp ]] && touch /etc/SSHPlus/Exp
 [[ ! -d /etc/SSHPlus/userteste ]] && mkdir /etc/SSHPlus/userteste
@@ -28,9 +25,10 @@ dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 [[ ! -d /etc/bot/arquivos ]] && mkdir /etc/bot/arquivos
 [[ ! -d /etc/bot/revenda ]] && mkdir /etc/bot/revenda
 [[ ! -d /etc/bot/suspensos ]] && mkdir /etc/bot/suspensos
+[[ ! -d /etc/rec ]] && mkdir /etc/rec
 [[ ! -e /etc/bot/lista_ativos ]] && touch /etc/bot/lista_ativos
 [[ ! -e /etc/bot/lista_suspensos ]] && touch /etc/bot/lista_suspensos
-echo -e 'by: @KIRITO_SSH' >/usr/lib/sshplus && cat /usr/lib/sshplus >$lst2/licence && cat /usr/lib/sshplus > /etc/SSHPlus/.tmp/crazy
+echo -e 'by: @ALFAINTERNET' >/usr/lib/sshplus && cat /usr/lib/sshplus >$lst2/licence && cat /usr/lib/sshplus > /etc/SSHPlus/.tmp/crazy
 netstat -nplt | grep -w 'apache2' | grep -w '80' && sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf && service apache2 restart
 [[ "$(grep -o '#Port 22' /etc/ssh/sshd_config)" == "#Port 22" ]] && sed -i "s;#Port 22;Port 22;" /etc/ssh/sshd_config && service ssh restart
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
@@ -38,7 +36,7 @@ echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
 rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 2>&1
-_mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py" "wsproxy.py" "trojan-go" "onlineapp" "swapmemory" "initbot" "blocksite" "fr" "multi" "websocket.sh" "tweaker" "webmin.sh" "trafegototal" "blockuser" "badpro" "badpro1" "painelv2ray" "ddos" "limit" "haveged" "rps_cpu" "tuning" "mtuning" "acksyshttpack" "ackclear" "apache2menu" ".uid" ".criar" ".rmuid" ".rmuser" "vnc_inst")
+_mdls=("acksyshttpack" "addhost" "ajuda" "alterarlimite" "alterarsenha" "antCrachARM.sh" "apache2menu" "attscript" "Autobackup" "backup_mail.sh" "badpro" "badpro1" "badvpn" "banner" "bashtop" "blocksite" "blockt" "blockuser" "bot" "botssh" "botteste" "botteste.sh" "cabecalho" "celular.sh" "conexao" "criarteste" "criarusuario" "ddos" "delhot" "delscript" "detalhes" "dns-netflix.sh" "dns-server" "droplimiter" "expcleaner" "fr" "havaged" "infousers" "initbot" "instsqd" "limit" "limiter" "menu" "mtuning" "mudardata" "multi" "onlineapp" "open.py" "otimizar" "painelv2ray" "prissh" "proxy.py" "reiniciarservicos" "reiniciarsistema" "remove-slow" "remover" "restartdns" "rps_cpu" "senharoot" "ShellBot.sh" "slow_dns" "slowdns" "slowdns-drop" "slowdns-info" "slowdns-socks" "slowdns-ssh" "slowdns-ssl" "speedtest" "sshmonitor" "startdns" "stopdns" "swapmemory" "trafegototal" "trojan-go" "tuning" "tweaker" "uexpired" "userbackup" "v2ray" "v2raymanager" "verifatt" "verifbot" "vnc_inst" "webmin.sh" "websocket.sh" "wsproxy.py")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
 	wget -c -P $_dir1 https://raw.githubusercontent.com/arquivobgx/SSHPLUS4/main/menu/mztp/Modulos/$_arq
@@ -64,10 +62,10 @@ clear
 #INICIO AUTOMATICO' >/etc/autostart
 	chmod +x /etc/autostart
 } || {
-	[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/alfainternet/main/Install/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
+	[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Install/ShellBot.sh
 	for proc in $(ps x | grep 'dmS' | grep -v 'grep' | awk {'print $1'}); do
-		screen -r -S "$proc" -X quit
-	done
+		screen -r -S "$proc" -X quit	
+done
 	screen -wipe >/dev/null
 	echo '#!/bin/bash
 clear
@@ -83,7 +81,7 @@ crontab -r >/dev/null 2>&1
 	echo "0 */6 * * * /bin/uexpired"
 ) | crontab -
 echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/versao && cat /bin/versao >/home/sshplus
-wget https://raw.githubusercontent.com/Noobproject/scripts/main/mztp/Install/jq-linux64 >/dev/null 2>&1
+wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Install/jq-linux64 >/dev/null 2>&1
 chmod +x jq-linux64 && mv jq-linux64 $(which jq)
 service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
